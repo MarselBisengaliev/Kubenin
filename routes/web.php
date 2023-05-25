@@ -26,12 +26,6 @@ Route::get('/login', function() {
     return view('login');
 })->name('login');
 
-Route::get('/register', function() {
-    return view('register');
-})->name('register');
-
-Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
-
 Route::get('/signout', [AuthController::class, 'signout'])->name('signout');
 
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');

@@ -16,10 +16,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Логин</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('register') }}">Регистрация</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Войти</a>
                     </li>
                 @endauth
             </ul>

@@ -8,13 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
     <style>
-      .card img {
-        object-fit: cover;
-        object-position: center ;
-        width: 100%;
-        height: 175px;
-      }
+        .card img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 175px;
+        }
     </style>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 
 <body>
@@ -24,6 +25,14 @@
         @yield('content')
     </div>
     <script src="{{ asset('bootstrap.bundle.min.js') }}"></script>
+    <footer class="bg-body-secondary">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <p>&copy; Все права защищены. </p>
+                <p>+77777777777</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

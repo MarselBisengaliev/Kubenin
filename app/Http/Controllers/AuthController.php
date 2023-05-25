@@ -50,11 +50,13 @@ class AuthController extends Controller
                 'password' => 'required'
             ]);
 
-            if (
-                Auth::attempt([
-                    'password' => $request->get('password'), 
-                    'email' => $request->get('email')
-                ], true)) {
+            $user = User::query()
+                ->where('password', $request->get('password'))
+                ->where('email', $request->get('email'))
+                ->first();
+
+            if ($user) {
+                Auth::login($user, true);
                 return redirect()->route('home')->with('success', 'Вы успешно вошли в аккаунт!');
             }
 
